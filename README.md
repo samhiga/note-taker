@@ -5,10 +5,11 @@
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
 | Git | [https://git-scm.com/](https://git-scm.com/)     | 
+| Heroku | [https://dashboard.heroku.com/apps](https://dashboard.heroku.com/apps)   |
 | Javascript | [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web)   |
 | Node.js | [https://nodejs.org/api/cli.html](https://nodejs.org/api/cli.html)   |
 | NPM | [https://www.npmjs.com/](https://www.npmjs.com/)   |
-| Express | [https://www.npmjs.com/package/inquirer/v/8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4)   |
+| Express | [https://www.npmjs.com/package/express](https://www.npmjs.com/package/express)   |
 
 
 
