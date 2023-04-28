@@ -45,6 +45,32 @@ app.post('/api/notes', (req, res) => {
     app.get('/', (req, res) =>
       res.sendFile(path.join(__dirname, '/public/index.html'))
     );
+
+    app.delete('/api/notes/:id', (req, res) => {
+        const { id } = req.params;
+    
+        readNotes()
+        .then(notes => {
+            const parsedNotes = JSON.parse(notes)
+            const delNote = parsedNotes.findIndex(note => note.id == id);
+    
+            if (delNote !== -1) {
+                parsedNotes.splice(delNote, 1);
+                writeNotes(parsedNotes)
+                .then(() => {
+                    res.json(parsedNotes)
+                })
+                .catch(err => {
+                    console.error(err)
+                })
+            } else {
+                res.status(404).send('Note not found')
+            }
+        })
+        .catch(err => {
+            console.error(err)
+        })
+    });
     
     app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
