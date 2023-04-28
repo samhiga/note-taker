@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const {readNotes, writeNotes} = require('./utils/dbHelpers')
+const uniqid = require('uniquid');
 const PORT = 3001;
 
 const app = express()
@@ -22,6 +23,7 @@ app.post('/api/notes', (req, res) => {
       .then(notes => {
           const parsedNotes = JSON.parse(notes)
           const newNote = {
+              id: uniqid(),
               title: req.body.title,
               text: req.body.text
             }
