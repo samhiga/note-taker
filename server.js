@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const {readNotes, writeNotes} = require('./utils/dbHelpers')
-const uniqid = require('uniquid');
+const uniqid = require('uniqid');
 const PORT = 3001;
 
 const app = express()
